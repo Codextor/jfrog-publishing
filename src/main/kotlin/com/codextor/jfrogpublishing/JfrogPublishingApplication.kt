@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class JfrogPublishingApplication
 
 fun main(args: Array<String>) {
-	runApplication<JfrogPublishingApplication>(*args)
+    runApplication<JfrogPublishingApplication>(*args)
 }
