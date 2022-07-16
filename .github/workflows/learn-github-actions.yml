@@ -15,3 +15,7 @@ jobs:
 
       - name: Execute Gradle build
         run: ./gradlew build
+
+      - name: Publish to jFrog
+        uses: jfrog/setup-jfrog-cli@v2
+        run: jf --version
