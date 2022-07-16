@@ -17,5 +17,5 @@ jobs:
         run: ./gradlew build
 
       - name: Publish to jFrog
-        uses: jfrog/setup-jfrog-cli@v2
-        run: jf --version
+      - uses: jfrog/setup-jfrog-cli@v2
+      - run: jf --version
