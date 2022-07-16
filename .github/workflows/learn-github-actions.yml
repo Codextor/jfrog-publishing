@@ -16,6 +16,9 @@ jobs:
       - name: Execute Gradle build
         run: ./gradlew build
 
+      - name: Execute Gradle jar
+        run: ./gradlew jar
+
       - name: Setup JFrog CLI
         uses: jfrog/setup-jfrog-cli@v2
         env:
@@ -23,9 +26,5 @@ jobs:
 
       - name: Run JFrog CLI
         run: |
-          # Collect environment variables for the build
-          jf rt bce
-          # Collect VCS details from git and add them to the build
-          jf rt bag
-          # Publish build info
-          jf rt bp
+          # Upload artifacts to JFrog
+          jf rt u "build/*.jar" sample-repo/jars/
